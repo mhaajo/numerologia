@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script src="skripti.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <title>Numerologia</title>
+  </head>
+  <body>
+    <div class="head_container">
+      <header>
+        <h1>Numerologia</h1>
+      </header>
+
+      <nav>
+        <a class="aktiivinen" href="minuus.html">Nimi</a>
+        <a href="elamanpolku.html">Syntymäaika</a>
+        <a href="index.html">Koti</a>
+      </nav>
+    </div>
+
+    <div class="rivi">
+      <section class="paa-alue">
+        <h2>Nimi</h2>
+
+        <p>
+          Anna koko nimesi (myös keskimmäinen nimi) niin lasken pyrkimyksen,
+          vaikutelman ja minuuden luvut:
+        </p>
+
+        <form>
+          <input type="text" id="nimi">
+          <div class="painikkeet2">
+            <input type="button" value="Laske" onclick="tarkistaKentta()">
+            <input type="reset" value="Tyhjennä" onclick="tyjennaKentta()">
+          </div>
+        </form>
+
+        <p id="minuustulos"></p>
+        <p id="esiintymat"></p>
+
+      </section>
+
+      <section class="reuna-alue">
+        <img src="kuva3.jpg" class="kuva" alt="Numerot">
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; Marko Haajo 2019</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+/* varmista HTML5 elementtien selainyhteensopivuus */
+header, section, footer, nav {
+  display: block;
+}
+
+/* pääotsikko */
+h1 {
+  font-size: 3.0em;
+  font-family: 'Calligraffitti';
+}
+
+
+/* headeri */
+header {
+  height: 120px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.head_container {
+  width: 992px;
+  margin:auto;
+  box-shadow: 0px 0px 10px grey;
+}
+
+/* valikko */
+nav {
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/* staili valikon linkeille */
+nav a {
+  float: right;
+  display: block;
+  color: black;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-shadow: 0px 0px 12px black;
+}
+
+/* stailit kun hiiren osoitin on valikkotekstin päällä */
+nav a:hover:not(.aktiivinen) {
+  color: white;
+}
+
+nav a:active:not(.aktiivinen) {
+  text-shadow: 0px 0px 6px black;
+}
+
+nav a.aktiivinen {
+  color: white;
+  text-shadow: 0px 0px 6px black;
+}
+
+/* alue johon tekstit tulee */
+.paa-alue {
+  float: left;
+  width: 700px;
+  height: 520px;
+  padding: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 0px 10px grey;
+}
+
+/* alue jossa näytetään kuvat */
+.reuna-alue {
+  float: left;
+  width: 272px;
+  height: 520px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px grey;
+}
+
+.kuva {
+  width: 272px;
+  height: 520px;
+}
+
+/* container pääalueelle ja reuna-alueelle */
+.rivi {
+  width: 992px;
+  margin:auto;
+}
+
+/* poista floatit rivin jälkeen */
+.rivi:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* taulukko jossa kirjainten numeroarvot */
+.numerologia {
+  border-collapse: collapse;
+}
+
+.numerologia td, .numerologia th {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.numerologia th {
+  background-color: lightgray;
+}
+
+/* teksti-inputti nimelle */
+input[type=text] {
+  width: 350px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+}
+
+/* nappulat laske ja tyhjennä */
+input[type=button], input[type=reset] {
+  padding: 7px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: LightSkyBlue;
+}
+
+/* efekti hiiren osoittimen ollessa nappulan päällä */
+input[type=button]:hover, input[type=reset]:hover {
+  color: white;
+  background-color: SteelBlue;
+}
+
+/* näytä lomakkeen nappulat vierekkäin input kentän vieressä */
+/* suurilla näytöillä ja vierekkäin input kentän alla pienillä */
+/* näytöillä */
+.painikkeet1 {
+  display: inline;
+}
+
+.painikkeet2 {
+  display: inline;
+}
+
+/* alasvetovalikot syntymäajan antamiselle */
+#pv, #kk {
+  width: 55px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 2px 8px;
+}
+
+#vv {
+  width: 70px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 2px 8px;
+}
+
+footer {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 7px;
+  width: 992px;
+  height: 70px;
+  margin: auto;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px grey;
+}
+
+/* stailit javascriptillä tulostettaville teksteille */
+.efekti1 {
+  font-size: 1.3em;
+}
+
+.efekti2 {
+  font-family: 'Calligraffitti';
+  font-size: 2.0em;
+  color: red;
+}
+
+/* Pyrin tekemään saitista ainakin osittain responsiivisen. Full HD:n  */
+/* ylittäviä pöytäkoneresoja en pystynyt testaamaan niin ne jäivät tukematta */
+@media screen and (max-width:1079px) {
+  .head_container {
+    width: 95%;
+  }
+
+  .rivi {
+    width: 95%;
+    height: 660px;
+  }
+
+  .paa-alue {
+    width: 100%;
+    height: 620px;
+  }
+
+  .kuva {
+    display: none;
+  }
+
+  .reuna-alue {
+    width: 0px;
+  }
+
+  footer {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .rivi {
+    height: 660px;
+  }
+
+  .paa-alue {
+    font-size: 0.9em;
+    height: 620px;
+  }
+
+  input[type=text] {
+    font-size: 0.9em;
+    width: 320px;
+  }
+
+  input[type=button], input[type=reset] {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 5px 8px;
+  }
+
+  .painikkeet2 {
+    display: block;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .rivi {
+    height: 680px;
+  }
+
+  .paa-alue {
+    font-size: 0.8em;
+    height: 640px;
+  }
+
+  input[type=text] {
+    width: 65vw;
+  }
+
+  .painikkeet1 {
+    display: block;
+  }
+
+  #pv, #kk, #vv {
+    padding: 2px 4px;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width:360px) {
+  .rivi {
+    height: 620px;
+  }
+
+  .paa-alue {
+    font-size: 0.7em;
+    padding: 25px;
+    height: 580px;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  nav a {
+    font-size: 1.0em;
+  }
+}
